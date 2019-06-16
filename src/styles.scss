@@ -3,3 +3,15 @@
 
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
+@import url('https://fonts.googleapis.com/css?family=Domine|Lora&display=swap');
+
+body {
+  background-image: url('./assets/bg_body.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+}
+
+html, body { height: 100%; }
+body { margin: 0;}

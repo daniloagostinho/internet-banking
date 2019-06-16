@@ -1,0 +1,36 @@
+
+
+    // STYLES form component
+    .cpfLabel,
+    .passwordLabel {
+        color: #fff;
+        font-family: 'Domine', serif;
+        font-size: 14px;
+
+        @media screen and(min-width: 768px) {
+            color: #143c4e;
+        }
+    }
+
+    form.box {
+        background: #fff;
+        padding: 30px;
+        border-radius: 5px;
+    }
+
+    input.password {
+
+        margin: 40px 0px 40px 0px;
+    }
+
+    .custom-buttom {
+        color: #fff;
+        background: #143c4e;
+
+        @media screen and(min-width: 768px) {
+            color: #fff;
+
+        }
+    }
+
+    // End STYLES form component
