@@ -1,12 +1,19 @@
-<form class="box">
+<form class="box" [formGroup]="loginForm">
+  <!-- <h1>{{}}</h1> -->
   <div class="form-group cpf">
     <label for="cpfLabel" class="cpfLabel">Faca login e desfrute de todos os seus beneficios</label>
-    <input type="text" class="form-control cpf" id="cpfLabel" aria-describedby="emailHelp" placeholder="Cpf" autocomplete="off">
-    <!-- <small id="emailHelp" class="form-text text-muted">Digite o cpf que voce<é/small> -->
+    <input type="text" class="form-control cpf" [class.is-invalid]="loginForm.get('cpf').touched && loginForm.get('cpf').hasError('required')" id="cpfLabel" aria-describedby="emailHelp" placeholder="Cpf"
+      autocomplete="off" mask="000.000.000-00" formControlName="cpf" required>
+      <!-- MENSAGEM DE VALIDACAO -->
+      <small id="emailHelp" class="form-text text-danger" *ngIf="loginForm.get('cpf').touched && loginForm.get('cpf').hasError('required')">Cpf obrigatorio</small>
   </div>
+
   <div class="form-group password">
     <!-- <label for="passwordLabel" class="passwordLabel">Senha</label> -->
-    <input type="password" class="form-control password" id="passwordLabel" placeholder="Senha" autocomplete="off">
+    <input type="password" class="form-control password" [class.is-invalid]="loginForm.get('password').touched && loginForm.get('cpf').hasError('required')" id="passwordLabel" placeholder="Senha" autocomplete="off"
+      formControlName="password" required>
+      <!-- MENSAGEM DE VALIDACAO -->
+      <small id="emailHelp" class="form-text text-danger" *ngIf="loginForm.get('password').touched && loginForm.get('password').hasError('required')">Senha obrigatorio</small>
   </div>
   <div class="form-group form-check">
     <!-- <input type="checkbox" class="form-check-input" id="exampleCheck1"> -->
