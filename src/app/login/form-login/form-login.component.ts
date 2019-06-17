@@ -7,7 +7,7 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./form-login.component.scss']
 })
 export class FormLoginComponent implements OnInit {
-
+  // controle do formulario
   loginForm  = this.fb.group({
     cpf: ['', Validators.required],
     password: ['', Validators.required],
@@ -17,10 +17,4 @@ export class FormLoginComponent implements OnInit {
   ngOnInit() {
 
   }
-  // METODO DE ERRO
-    // getErrorInput(input) {
-    //   if (this.loginForm.get(input).invalid) {
-    //     return;
-    //   }
-    // }
 }

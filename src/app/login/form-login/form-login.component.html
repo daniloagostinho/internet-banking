@@ -1,5 +1,4 @@
 <form class="box" [formGroup]="loginForm">
-  <!-- <h1>{{}}</h1> -->
   <div class="form-group cpf">
     <label for="cpfLabel" class="cpfLabel">Faca login e desfrute de todos os seus beneficios</label>
     <input type="text" class="form-control cpf" [class.is-invalid]="loginForm.get('cpf').touched && loginForm.get('cpf').hasError('required')" id="cpfLabel" aria-describedby="emailHelp" placeholder="Cpf"
